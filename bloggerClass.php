@@ -47,8 +47,7 @@ $dom = new DOMDocument();
 @$dom->loadHTML($data);
   
 $xpath = new DOMXPath($dom);
-    
-// returns a list of all links with rel=nofollow
+
 $nlist = $xpath->query("//iframe");
 $fileurl = $nlist[0]->getAttribute("src");
 return $fileurl;
